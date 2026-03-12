@@ -90,7 +90,7 @@ function backProducts(){
  document.getElementById('productPage').style.display='block';
 }
 
-function viewDetail(name,desc){
+function viewDetail(name,desc,img1,img2,img3,img4){
  document.getElementById('productPage').style.display='none';
  document.getElementById('detailPage').style.display='block';
 
@@ -98,10 +98,10 @@ function viewDetail(name,desc){
  document.getElementById('detailDesc').innerText=desc;
 
  // clear images so user can add their own later
- document.getElementById('img1').src='';
- document.getElementById('img2').src='';
- document.getElementById('img3').src='';
- document.getElementById('img4').src='';
+ document.getElementById('img1').src=img1;
+ document.getElementById('img2').src=img2;
+ document.getElementById('img3').src=img3;
+ document.getElementById('img4').src=img4;
 
  document.getElementById('productNameField').value=name;
  document.getElementById('orderProductName').innerText=name;
@@ -195,7 +195,14 @@ function closePopup(id){
 <div class="card">
 <img src="necklace1.jpg">
 <h3>Necklace</h3>
-<button onclick="viewDetail('Necklace','Beautiful decorative necklace worn around the neck.')">View</button>
+ <button onclick="viewDetail(
+'Necklace',
+'Beautiful decorative necklace worn around the neck.',
+'necklace1.jpg',
+'necklace2.jpg',
+'necklace3.jpg',
+'necklace4.jpg'
+)">View</button>
 </div>
 
 <div class="card">
@@ -315,6 +322,7 @@ Address: Your City
 
 </body>
 </html>
+
 
 
 
